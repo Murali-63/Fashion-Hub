@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub - Trendy Clothing & Accessories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">FashionHub</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <div class="auth-buttons">
+                            <button class="btn btn-outline" id="loginBtn">Login</button>
+                            <button class="btn btn-solid" id="signupBtn" style="color: white;">Sign Up</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+        <div class="container hero-content">
+            <h1>✨ Welcome to FashionHub – Where Style Meets Confidence! ✨</h1>
+            <p>Discover the latest trends, timeless classics, and everyday essentials all in one place. At FashionHub, we believe fashion is more than clothing – it's your personality, your statement, your identity. 🌟</p>
+            <a href="#products" class="btn">Shop Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="categories" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Collections</h2>
+                <p>Where every outfit tells your story. Step in, stand out, and shine in style!</p>
+            </div>
+            
+            <div class="category-tabs">
+                <div class="category-tab active" data-category="men">Men's Collection 🤵</div>
+                <div class="category-tab" data-category="women">Women's Collection 👗</div>
+                <div class="category-tab" data-category="kids">Kids' Collection 👶</div>
+                <div class="category-tab" data-category="accessories">Accessories 💍</div>
+                <div class="category-tab" data-category="shoes">Footwear 👟</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Men -->
+            <div class="subcategory-tabs" id="menSubcategories">
+                <div class="subcategory-tab active" data-subcategory="shirts">Shirts</div>
+                <div class="subcategory-tab" data-subcategory="tshirts">T-Shirts</div>
+                <div class="subcategory-tab" data-subcategory="pants">Pants</div>
+                <div class="subcategory-tab" data-subcategory="shorts">Shorts</div>
+                
+                <div class="subcategory-tab" data-subcategory="innerwear">Inner Wear</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Women -->
+            <div class="subcategory-tabs" id="womenSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="kurtis">Kurtis & Sets</div>
+                <div class="subcategory-tab" data-subcategory="tops">Tops & Tees</div>
+                <div class="subcategory-tab" data-subcategory="sarees">Sarees</div>
+                <div class="subcategory-tab" data-subcategory="sleepwear">Sleepwear</div>
+                <div class="subcategory-tab" data-subcategory="innerwear">Innerwear</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Kids -->
+            <div class="subcategory-tabs" id="kidsSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="boys">Boys Collection</div>
+                <div class="subcategory-tab" data-subcategory="girls">Girls Collection</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Boys -->
+            <div class="subcategory-tabs" id="boysSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="bshirts">Shirts</div>
+                <div class="subcategory-tab" data-subcategory="btshirts">T-Shirts</div>
+                <div class="subcategory-tab" data-subcategory="bpants">Pants</div>
+                <div class="subcategory-tab" data-subcategory="bshorts">Shorts</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Girls -->
+            <div class="subcategory-tabs" id="girlsSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="gtops">Tops & Tees</div>
+                <div class="subcategory-tab" data-subcategory="gethnic">Ethnic Wear</div>
+                <div class="subcategory-tab" data-subcategory="gskirts">Skirts & Shorts</div>
+                <div class="subcategory-tab" data-subcategory="gsets">Clothing Sets</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Accessories -->
+            <div class="subcategory-tabs" id="accessoriesSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="menAccessories">Men's Accessories</div>
+                <div class="subcategory-tab" data-subcategory="womenAccessories">Women's Accessories</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Men's Accessories -->
+            <div class="subcategory-tabs" id="menAccessoriesSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="watches">Watches</div>
+                <div class="subcategory-tab" data-subcategory="wallets">Wallets</div>
+                <div class="subcategory-tab" data-subcategory="sunglasses">Sunglasses&Belts</div>
+                <div class="subcategory-tab" data-subcategory="Rings">Rings&Chain</div>
+                
+            </div>
+            
+            <!-- Subcategory Tabs for Women's Accessories -->
+            <div class="subcategory-tabs" id="womenAccessoriesSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="handbags">Handbags&Wallets</div>
+                <div class="subcategory-tab" data-subcategory="sunglasses">Sunglasses</div>
+                 <div class="subcategory-tab" data-subcategory="Rings">Rings&Chain</div>
+                 <div class="subcategory-tab active" data-subcategory="watches">Watches</div>
+               
+            </div>
+            
+            <!-- Subcategory Tabs for Shoes -->
+            <div class="subcategory-tabs" id="shoesSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="menShoes">Men's Footwear</div>
+                <div class="subcategory-tab" data-subcategory="womenShoes">Women's Footwear</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Men's Shoes -->
+            <div class="subcategory-tabs" id="menShoesSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="sneakers">Sneakers</div>
+                <div class="subcategory-tab" data-subcategory="formals">Formal Shoes</div>
+                <div class="subcategory-tab" data-subcategory="casuals">Casual Shoes</div>
+                <div class="subcategory-tab" data-subcategory="sports">Sports Shoes</div>
+            </div>
+            
+            <!-- Subcategory Tabs for Women's Shoes -->
+            <div class="subcategory-tabs" id="womenShoesSubcategories" style="display: none;">
+                <div class="subcategory-tab active" data-subcategory="heels">Heels</div>
+                <div class="subcategory-tab" data-subcategory="flats">Flats</div>
+                <div class="subcategory-tab" data-subcategory="sandals">Sandals</div>
+                <div class="subcategory-tab" data-subcategory="sneakers">Sneakers</div>
+            </div>
+            
+            <div class="product-items" id="productItems">
+                <!-- Product items will be added dynamically with JavaScript -->
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-shopping-bag"></i> Your Shopping Bag</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items-container" id="cartItems">
+                    <!-- Cart items will be added dynamically -->
+                    <div class="empty-cart-message">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p>Your shopping bag is empty</p>
+                    </div>
+                </div>
+                
+                <div class="delivery-details" id="deliveryDetails">
+                    <h3><i class="fas fa-truck"></i> Delivery Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="deliveryName">Full Name</label>
+                            <input type="text" id="deliveryName" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryPhone">Phone Number</label>
+                            <input type="tel" id="deliveryPhone" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address</label>
+                        <textarea id="deliveryAddress" rows="3" placeholder="Enter your complete delivery address"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="deliveryCity">City</label>
+                            <input type="text" id="deliveryCity" placeholder="Enter your city">
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryPincode">Pincode</label>
+                            <input type="text" id="deliveryPincode" placeholder="Enter pincode">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryInstructions">Special Instructions</label>
+                        <textarea id="deliveryInstructions" rows="2" placeholder="Any special delivery instructions?"></textarea>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                    <div class="payment-options">
+                        <div class="payment-option active">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331965.png" alt="Cash">
+                            <p>Cash on Delivery</p>
+                        </div>
+                        <div class="payment-option">
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888871.png" alt="PayTM">
+                            <p>PayTM</p>
+                        </div>
+                        <div class="payment-option">
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888862.png" alt="UPI">
+                            <p>UPI Payment</p>
+                        </div>
+                        <div class="payment-option">
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="Card">
+                            <p>Credit/Debit Card</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="total-price">
+                    Total: <span id="totalPrice">0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-lock"></i> Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-content">
+            <div class="auth-header">
+                <h2 id="authModalTitle">Welcome Back!</h2>
+                <button class="auth-close" id="authClose">&times;</button>
+            </div>
+            <div class="auth-tabs">
+                <div class="auth-tab active" data-tab="login">Login</div>
+                <div class="auth-tab" data-tab="signup">Sign Up</div>
+            </div>
+            <div class="auth-body">
+                <form class="auth-form active" id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <button type="submit" class="auth-btn login-btn">Login</button>
+                    <div class="auth-footer">
+                        <p>Don't have an account? <span class="auth-toggle" data-tab="signup">Sign up</span></p>
+                    </div>
+                </form>
+                
+                <form class="auth-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Enter your full name">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPhone">Phone Number</label>
+                        <input type="tel" id="signupPhone" placeholder="Enter your phone number">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create a password">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <input type="password" id="signupConfirmPassword" placeholder="Confirm your password">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <button type="submit" class="auth-btn signup-btn">Create Account</button>
+                    <div class="auth-footer">
+                        <p>Already have an account? <span class="auth-toggle" data-tab="login">Login</span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FashionHub</h3>
+                    <p>Bringing the latest fashion trends to your doorstep since 2023. Our mission is to help you express your unique style with confidence and elegance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Mumbai, MH 400001</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-envelope"></i> info@fashionhub.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sun: 9:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for special offers and updates</p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address">
+                    </div>
+                    <button class="btn" style="width: 100%;">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 FashionHub. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> in India
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
